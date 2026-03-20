@@ -10,13 +10,11 @@ public:
     while(ss>>word) {
         words.push_back(word) ;
     }
-    // Reverse words 
-    reverse(words.begin(),words.end());
     // Join words 
     string result="";
-    for(int i=0;i<words.size();i++){
+    for(int i=words.size()-1;i>=0;i--){
         result+=words[i];
-        if(i!=words.size()-1){
+        if(i!=0){
             result+=" ";
         }
     }
